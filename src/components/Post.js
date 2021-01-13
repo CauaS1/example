@@ -10,7 +10,7 @@ function Post(props) {
 
   function handleOnChange(e) {
     setInputText(e.target.value);
-  } 
+  }
 
   function handleAddPost() {
     const text = inputText;
@@ -22,13 +22,14 @@ function Post(props) {
 
   return (
     <div>
-      {/* {props.post.postReducer.map(posts => {
-        return <h1 key={posts.id} >{posts.text}</h1>
-      })} */}
+      {props.post.postReducer.map(post => {
+          return <h1 key={post.id} >{post.text}</h1>
+        })
+      }
 
       <h2>{inputText}</h2>
       <input type="text"
-        placeholder="Write what are you thinking" 
+        placeholder="Write what are you thinking"
         onChange={handleOnChange}
         value={inputText}
       />
@@ -44,7 +45,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  bindActionCreators(postAction, dispatch);
+  return bindActionCreators(postAction, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Post);
