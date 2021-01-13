@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import './post.css';
+import User from '../icon/user.svg';
+
 import * as postAction from '../actions/index';
 
 function Post(props) {
@@ -17,24 +20,46 @@ function Post(props) {
     console.log(text)
 
     props.addPost(text);
+    setInputText('')
   }
 
 
   return (
-    <div>
-      {props.post.postReducer.map(post => {
-          return <h1 key={post.id} >{post.text}</h1>
-        })
-      }
+    <div className="container">
+      <div className="input-container">
+        <input type="text"
+          placeholder="Write what are you thinking"
+          onChange={handleOnChange}
+          value={inputText}
+          required
+        />
+        <button onClick={handleAddPost} type="submit">
+          Post
+        </button>
+      </div>
 
-      <h2>{inputText}</h2>
-      <input type="text"
-        placeholder="Write what are you thinking"
-        onChange={handleOnChange}
-        value={inputText}
-      />
-      <button onClick={handleAddPost}>Click here</button>
-    </div>
+      <div className="posts-container">
+        {props.post.postReducer.map(post => {
+          return (
+            <div className="post">
+              <div className="photo-container">
+                <div className="img">
+                  <img src={User} alt="img"/>
+                </div>
+              </div>
+
+              <div className="info-container">
+                <div className="name-container">
+                  <h4>CauaS1</h4>
+                </div>
+                <p key={post.id}>{post.text}</p>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+    </div >
   )
 }
 

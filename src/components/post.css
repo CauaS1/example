@@ -1,0 +1,151 @@
+.container {
+  width: 100vw;
+  padding: 2rem 0;
+  min-height: 100vh;
+  background-color: #10161D;
+}
+
+.input-container {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-container input {
+  flex: 3;
+  height: 2.5rem;
+  padding: 0 .5rem;
+  border-radius: .5rem;
+  border: 0;
+  outline: none;
+  margin-right: .5rem;
+  box-shadow: 0px 1px 5px 1px #cacace63;
+  transition: .3s;
+}
+
+.input-container button {
+  flex: 1;
+  height: 2.5rem;
+  cursor: pointer;
+  
+  background-color: #1B2936;
+  border: 0;
+  border-radius: .5rem;
+
+  color: #f5f5f5;
+  font-family: Rubik, sans-serif;
+  transition: .3s;
+}
+
+.input-container button:hover, input:hover {
+  opacity: .8;
+}
+
+/*posts-container*/
+.posts-container {
+  margin: auto;
+  width: 100%;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+/*post*/
+.post {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  border-radius: .2rem;
+  margin-bottom: 1rem;
+  padding: .5rem 0;
+  background-color: #1B2936;
+
+}
+
+.post .photo-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;  
+}
+
+.photo-container .img {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: #10161D;
+}
+
+.photo-container .img img {
+  margin-left: .2rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.post .info-container {
+    flex: 4;
+}
+
+.info-container .name-container {
+  height: 1.4rem;
+}
+
+.info-container .name-container h4 {
+  font-family: Rubik, sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.post .info-container p {
+  width: 90%;
+  font-family: Rubik, sans-serif;
+  color: #f5f5f5;
+}
+
+/*responsive*/
+@media(min-width: 600px) {
+  .posts-container {
+    width: 95%;
+  }
+}
+
+@media(min-width: 750px) {
+  .input-container {
+    width: 80%;
+  }
+}
+
+@media(min-width: 900px) {
+  .posts-container {
+    width: 75%;
+  }
+}
+
+@media(min-width: 1150px) {
+  .input-container {
+    width: 60%;
+  }
+
+  .posts-container {
+    width: 70%;
+  }
+}
+
+@media(min-width: 1250px) {
+  .input-container {
+    width: 55%;
+  }
+
+  .posts-container {
+    width: 50%;
+  }
+}
+
+
