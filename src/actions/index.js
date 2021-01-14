@@ -6,3 +6,11 @@ export function addPost(text) {
     message: "It was Posted!"
   } 
 }
+
+export const RETWEET = 'RETWEET';
+export function retweet(id) {
+  return {
+    type: RETWEET,
+    id,
+  }
+}

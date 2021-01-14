@@ -45,7 +45,7 @@
 /*posts-container*/
 .posts-container {
   margin: auto;
-  width: 100%;
+  width: 95%;
   padding: 1rem;
   margin: auto;
   margin-top: 2rem;
@@ -55,13 +55,19 @@
 .post {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   border-radius: .2rem;
   margin-bottom: 1rem;
-  padding: .5rem 0;
+  /* padding: .5rem 0; */
   background-color: #1B2936;
 
+}
+
+.post .top-content {
+  display: flex;
+  flex-direction: row;
+  padding: .5rem 0;
 }
 
 .post .photo-container {
@@ -107,6 +113,28 @@
   width: 90%;
   font-family: Rubik, sans-serif;
   color: #f5f5f5;
+}
+
+.post .bottom-content {
+  width: 100%;
+  height: 1.8rem;
+
+  padding: 0 8rem;
+  margin-top: .5rem;
+  border-top: 1px solid #cacace15;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-content div {
+  width: 2rem;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*responsive*/
