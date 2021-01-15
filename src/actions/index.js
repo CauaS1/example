@@ -14,3 +14,11 @@ export function retweet(id) {
     id,
   }
 }
+
+export const LIKE = 'LIKE';
+export function like(id) {
+  return {
+    type: LIKE,
+    id
+  }
+}
